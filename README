@@ -1,0 +1,11 @@
+动态数据源切换：支持在一个方法里调用其他数据源的方法以及多次调用同一个数据源的方法不会中途切换数据源
+
+扩展：
+目标对象的类标注了Transactional注解都会命中切面
+@within(org.springframework.transaction.annotation.Transactional)
+方法标注了Transactional注解
+@annotation(org.springframework.transaction.annotation.Transactional)
+目标对象熟悉了AccountService接口
+target(com.xyz.service.AccountService)
+提取目标执行方法的参数
+args(java.io.Serializable)
